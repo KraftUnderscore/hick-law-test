@@ -5,27 +5,159 @@
     <script src="code.js"></script>
 </head>
 <body>
-<div id="intro" class="hidden">
+<div class="hidden">
     <h1>Test prawa Hick'a</h1>
 
     <p>Test składa się z 5 zadań, każde z nich polega na wybraniu odpowiedniej opcji zgodnie z poleceniem.</p>
 
-    <button class="mainBtn" id="introBtn">Zaczynamy!</button>
+    <button class="mainBtn">Zaczynamy!</button>
 </div>
-<div id="task1" class="hidden">
+<div class="hidden">
     <h1>Zadanie 1</h1>
 
     <p>Wybierz przycisk z napisem <b>KACZKA</b> spośród dostępnych opcji</p>
 
-    <button  class="mainBtn" id="1st">Zaczynamy!</button>
-    <div class="taskOpt">
-        <button class="answer">AUTOBUS</button>
-        <button>KACZKA</button>
+    <button  class="answer">Zaczynamy!</button>
+    <div class="taskOptOff">
+        <button>AUTOBUS</button>
+        <button class="mainBtn">KACZKA</button>
         <button>SAMOLOT</button>
     </div>
 </div>
+<div class="hidden">
+    <h1>Zadanie 2</h1>
 
+    <p>Wybierz przycisk z napisem <b>BETON</b> spośród dostępnych opcji</p>
 
+    <button  class="answer">Zaczynamy!</button>
+    <div class="taskOptOff">
+        <button>MOST</button>
+        <button>TWARZ</button>
+        <button>ODRZUTOWIEC</button>
+        <button>FIOLET</button>
+        <button class="mainBtn">BETON</button>
+        <button>KANAPKA</button>
+    </div>
+</div>
+<div class="hidden">
+    <h1>Zadanie 3</h1>
+
+    <p>Wybierz przycisk z napisem <b>LUSTERKO</b> spośród dostępnych opcji</p>
+
+    <button  class="answer">Zaczynamy!</button>
+    <div class="taskOptOff">
+        <button>PIES</button>
+        <button>PAZNOKIEĆ</button>
+        <button>MIKROFON</button>
+        <button>JABŁKO</button>
+        <button>ŚCIANA</button>
+        <button>MYDŁO</button>
+        <button>GŁOŚNIK</button>
+        <button class="mainBtn">LUSTERKO</button>
+        <button>BANAN</button>
+        <button>CHODNIK</button>
+        <button>SZYNKA</button>
+        <button>KOT</button>
+    </div>
+</div>
+<div class="hidden">
+    <h1>Zadanie 4</h1>
+
+    <p>Wybierz przycisk z napisem <b>BABCIA</b> spośród dostępnych opcji</p>
+
+    <button  class="answer">Zaczynamy!</button>
+    <div class="taskOptOff">
+        <button>NADZIEJA</button>
+        <button>KRAB</button>
+        <button>PCHŁA</button>
+        <button>KEBAB</button>
+        <button>GRZYB</button>
+        <button>DZIADEK</button>
+        <button>KOMETA</button>
+        <button>GITARA</button>
+        <button>ZABAWA</button>
+        <button>RANA</button>
+        <button>ENZYM</button>
+        <button>EGAZMIN</button>
+        <button>ŻEBRO</button>
+        <button>KOMITET</button>
+        <button>ENCYKLOPEDIA</button>
+        <button>BASEN</button>
+        <button>RULETKA</button>
+        <button class="mainBtn">BABCIA</button>
+        <button>POLSKA</button>
+        <button>OPROGRAMOWANIE</button>
+        <button>WYNIK</button>
+        <button>WŁOCHY</button>
+        <button>KALORYFER</button>
+        <button>WIELKOLUD</button>
+    </div>
+</div>
+
+<div class="hidden">
+    <h1>Zadanie 5</h1>
+
+    <p>Wybierz przycisk z napisem <b>LICENCJA</b> spośród dostępnych opcji</p>
+
+    <button  class="answer">Zaczynamy!</button>
+    <div class="taskOptOff">
+        <button>DRUT</button>
+        <button>MĄDROŚĆ</button>
+        <button>FIGURA</button>
+        <button>WODOSPAD</button>
+        <button>PROTEZA</button>
+        <button>CERTYFIKAT</button>
+        <button>SZPIEG</button>
+        <button>KREW</button>
+        <button>ZDERZENIE</button>
+        <button>ODPOCZYNEK</button>
+        <button>WŁOSY</button>
+        <button>DUCH</button>
+        <button>ZĘBY</button>
+        <button>MASZYNA</button>
+        <button>DRZWI</button>
+        <button>GOL</button>
+        <button>PRZYNĘTA</button>
+        <button>METAL</button>
+        <button>MŁOTEK</button>
+        <button>SIEDZENIE</button>
+        <button>WADA</button>
+        <button>PODDASZE</button>
+        <button>WULKAN</button>
+        <button>SMOK</button>
+        <button>OKRUCHY</button>
+        <button>SŁOMKA</button>
+        <button>CIEŃ</button>
+        <button>TABLICA</button>
+        <button>BONUS</button>
+        <button>PLAC</button>
+        <button>WIESZAK</button>
+        <button>RAMA</button>
+        <button>LÓD</button>
+        <button class="mainBtn">LICENCJA</button>
+        <button>INŻYNIER</button>
+        <button>SZLAUCH</button>
+        <button>OLIWKA</button>
+        <button>WINDA</button>
+        <button>ZAOPATRZENIE</button>
+        <button>DOCHÓD</button>
+        <button>ULICZKA</button>
+        <button>NUREK</button>
+        <button>KRĘGOSŁUP</button>
+        <button>MORWA</button>
+        <button>OGÓREK</button>
+        <button>WRÓŻKA</button>
+        <button>OSIOŁ</button>
+        <button>GÓRY</button>
+    </div>
+</div>
+
+<div class="hidden">
+    <h1>Dziękuję za udział w badaniu :)</h1>
+
+    <p>Proszę, skopiuj i prześlij do mnie następujące wyniki:</p>
+    <p id="results"></p>
+</div>
 
 </body>
 </html>

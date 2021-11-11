@@ -6,3 +6,12 @@
 .hidden {
     display: none;
 }
+
+.taskOpt {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    visibility: visible;
+}
+.taskOptOff {
+    display: none;
+}
