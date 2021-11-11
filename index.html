@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="code.js"></script>
 </head>
 <body>
 <div id="intro" class="visible">
@@ -9,14 +10,19 @@
 
     <p>Test składa się z 5 zadań, każde z nich polega na wybraniu odpowiedniej opcji zgodnie z poleceniem.</p>
 
-    <button>Zaczynamy!</button>
+    <button id="introBtn">Zaczynamy!</button>
 </div>
 <div id="task1" class="hidden">
-    <h1>Test prawa Hick'a</h1>
+    <h1>Zadanie 1</h1>
 
-    <p>Test składa się z 5 zadań, każde z nich polega na wybraniu odpowiedniej opcji zgodnie z poleceniem.</p>
+    <p>Wybierz przycisk z napisem <b>KACZKA</b> spośród dostępnych opcji</p>
 
-    <button>Zaczynamy!</button>
+    <button id="1st">Zaczynamy!</button>
+    <div id="task1opt">
+        <button class="continue">AUTOBUS</button>
+        <button>KACZKA</button>
+        <button>SAMOLOT</button>
+    </div>
 </div>
 
 
