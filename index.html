@@ -5,25 +5,26 @@
     <script src="code.js"></script>
 </head>
 <body>
-<div id="intro" class="visible">
+<div id="intro" class="hidden">
     <h1>Test prawa Hick'a</h1>
 
     <p>Test składa się z 5 zadań, każde z nich polega na wybraniu odpowiedniej opcji zgodnie z poleceniem.</p>
 
-    <button id="introBtn">Zaczynamy!</button>
+    <button class="mainBtn" id="introBtn">Zaczynamy!</button>
 </div>
 <div id="task1" class="hidden">
     <h1>Zadanie 1</h1>
 
     <p>Wybierz przycisk z napisem <b>KACZKA</b> spośród dostępnych opcji</p>
 
-    <button id="1st">Zaczynamy!</button>
-    <div id="task1opt">
-        <button class="continue">AUTOBUS</button>
+    <button  class="mainBtn" id="1st">Zaczynamy!</button>
+    <div class="taskOpt">
+        <button class="answer">AUTOBUS</button>
         <button>KACZKA</button>
         <button>SAMOLOT</button>
     </div>
 </div>
+
 
 
 </body>
