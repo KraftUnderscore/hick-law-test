@@ -1,0 +1,7 @@
+.visible {
+    border-style: none none solid none;
+    padding-bottom: 10px;
+}
+.hidden {
+    visibility: hidden;
+}
