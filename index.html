@@ -5,150 +5,135 @@
     <script src="code.js"></script>
 </head>
 <body>
-<div class="hidden">
+<div class="intro">
     <h1>Test prawa Hick'a</h1>
 
     <p>Test składa się z 5 zadań, każde z nich polega na wybraniu odpowiedniej opcji zgodnie z poleceniem.</p>
 
-    <button class="mainBtn">Zaczynamy!</button>
+    <button id="introBtn">Zaczynamy!</button>
 </div>
 <div class="hidden">
     <h1>Zadanie 1</h1>
 
-    <p>Wybierz przycisk z napisem <b>KACZKA</b> spośród dostępnych opcji</p>
+    <p>Wybierz opcję <b>AUTOBUS</b> z rozwijanej listy</p>
 
-    <button  class="answer">Zaczynamy!</button>
+    <button class="answer">Zaczynamy!</button>
     <div class="taskOptOff">
-        <button>AUTOBUS</button>
-        <button class="mainBtn">KACZKA</button>
-        <button>SAMOLOT</button>
+        <select class="mainBtn">
+            <option>Wybierz z listy</option>
+            <option>KACZKA</option>
+            <option class="taskAnsw">AUTOBUS</option>
+        </select>
     </div>
 </div>
+
 <div class="hidden">
     <h1>Zadanie 2</h1>
 
-    <p>Wybierz przycisk z napisem <b>BETON</b> spośród dostępnych opcji</p>
+    <p>Wybierz opcję <b>TWARZ</b> z rozwijanej listy</p>
 
     <button  class="answer">Zaczynamy!</button>
     <div class="taskOptOff">
-        <button>MOST</button>
-        <button>TWARZ</button>
-        <button>ODRZUTOWIEC</button>
-        <button>FIOLET</button>
-        <button class="mainBtn">BETON</button>
-        <button>KANAPKA</button>
+        <select class="mainBtn">
+            <option>Wybierz z listy</option>
+            <option>ODRZUTOWIEC</option>
+            <option>BETON</option>
+            <option class="taskAnsw">TWARZ</option>
+            <option>KANAPKA</option>
+        </select>
     </div>
 </div>
 <div class="hidden">
     <h1>Zadanie 3</h1>
 
-    <p>Wybierz przycisk z napisem <b>LUSTERKO</b> spośród dostępnych opcji</p>
+    <p>Wybierz opcję <b>JABŁKO</b> z rozwijanej listy</p>
 
     <button  class="answer">Zaczynamy!</button>
     <div class="taskOptOff">
-        <button>PIES</button>
-        <button>PAZNOKIEĆ</button>
-        <button>MIKROFON</button>
-        <button>JABŁKO</button>
-        <button>ŚCIANA</button>
-        <button>MYDŁO</button>
-        <button>GŁOŚNIK</button>
-        <button class="mainBtn">LUSTERKO</button>
-        <button>BANAN</button>
-        <button>CHODNIK</button>
-        <button>SZYNKA</button>
-        <button>KOT</button>
+        <select class="mainBtn">
+            <option>Wybierz z listy</option>
+            <option>PIES</option>
+            <option>MIKROFON</option>
+            <option>BANAN</option>
+            <option>ŚCIANA</option>
+            <option>LUSTERKO</option>
+            <option class="taskAnsw">JABŁKO</option>
+            <option>MYDŁO</option>
+            <option>GŁOŚNIK</option>
+        </select>
     </div>
 </div>
 <div class="hidden">
     <h1>Zadanie 4</h1>
 
-    <p>Wybierz przycisk z napisem <b>BABCIA</b> spośród dostępnych opcji</p>
+    <p>Wybierz opcję <b>ZABAWA</b> z rozwijanej listy</p>
 
     <button  class="answer">Zaczynamy!</button>
     <div class="taskOptOff">
-        <button>NADZIEJA</button>
-        <button>KRAB</button>
-        <button>PCHŁA</button>
-        <button>KEBAB</button>
-        <button>GRZYB</button>
-        <button>DZIADEK</button>
-        <button>KOMETA</button>
-        <button>GITARA</button>
-        <button>ZABAWA</button>
-        <button>RANA</button>
-        <button>ENZYM</button>
-        <button>EGAZMIN</button>
-        <button>ŻEBRO</button>
-        <button>KOMITET</button>
-        <button>ENCYKLOPEDIA</button>
-        <button>BASEN</button>
-        <button>RULETKA</button>
-        <button class="mainBtn">BABCIA</button>
-        <button>POLSKA</button>
-        <button>OPROGRAMOWANIE</button>
-        <button>WYNIK</button>
-        <button>WŁOCHY</button>
-        <button>KALORYFER</button>
-        <button>WIELKOLUD</button>
+        <select class="mainBtn">
+            <option>Wybierz z listy</option>
+            <option>WYNIK</option>
+            <option>WŁOCHY</option>
+            <option>KALORYFER</option>
+            <option>ENCYKLOPEDIA</option>
+            <option>BASEN</option>
+            <option>DZIADEK</option>
+            <option>KOMETA</option>
+            <option>GITARA</option>
+            <option class="taskAnsw">ZABAWA</option>
+            <option>RANA</option>
+            <option>ENZYM</option>
+            <option>BABCIA</option>
+            <option>RULETKA</option>
+            <option>POLSKA</option>
+            <option>OPROGRAMOWANIE</option>
+            <option>WIELKOLUD</option>
+        </select>
     </div>
 </div>
 
 <div class="hidden">
     <h1>Zadanie 5</h1>
 
-    <p>Wybierz przycisk z napisem <b>LICENCJA</b> spośród dostępnych opcji</p>
+    <p>Wybierz opcję <b>METAL</b> z rozwijanej listy</p>
 
     <button  class="answer">Zaczynamy!</button>
     <div class="taskOptOff">
-        <button>DRUT</button>
-        <button>MĄDROŚĆ</button>
-        <button>FIGURA</button>
-        <button>WODOSPAD</button>
-        <button>PROTEZA</button>
-        <button>CERTYFIKAT</button>
-        <button>SZPIEG</button>
-        <button>KREW</button>
-        <button>ZDERZENIE</button>
-        <button>ODPOCZYNEK</button>
-        <button>WŁOSY</button>
-        <button>DUCH</button>
-        <button>ZĘBY</button>
-        <button>MASZYNA</button>
-        <button>DRZWI</button>
-        <button>GOL</button>
-        <button>PRZYNĘTA</button>
-        <button>METAL</button>
-        <button>MŁOTEK</button>
-        <button>SIEDZENIE</button>
-        <button>WADA</button>
-        <button>PODDASZE</button>
-        <button>WULKAN</button>
-        <button>SMOK</button>
-        <button>OKRUCHY</button>
-        <button>SŁOMKA</button>
-        <button>CIEŃ</button>
-        <button>TABLICA</button>
-        <button>BONUS</button>
-        <button>PLAC</button>
-        <button>WIESZAK</button>
-        <button>RAMA</button>
-        <button>LÓD</button>
-        <button class="mainBtn">LICENCJA</button>
-        <button>INŻYNIER</button>
-        <button>SZLAUCH</button>
-        <button>OLIWKA</button>
-        <button>WINDA</button>
-        <button>ZAOPATRZENIE</button>
-        <button>DOCHÓD</button>
-        <button>ULICZKA</button>
-        <button>NUREK</button>
-        <button>KRĘGOSŁUP</button>
-        <button>MORWA</button>
-        <button>OGÓREK</button>
-        <button>WRÓŻKA</button>
-        <button>OSIOŁ</button>
-        <button>GÓRY</button>
+        <select class="mainBtn">
+            <option>Wybierz z listy</option>
+            <option>DRUT</option>
+            <option>MĄDROŚĆ</option>
+            <option>FIGURA</option>
+            <option>WODOSPAD</option>
+            <option>PROTEZA</option>
+            <option>DRZWI</option>
+            <option>TABLICA</option>
+            <option>BONUS</option>
+            <option>PLAC</option>
+            <option>WIESZAK</option>
+            <option>RAMA</option>
+            <option>LÓD</option>
+            <option>INŻYNIER</option>
+            <option>SZLAUCH</option>
+            <option>OLIWKA</option>
+            <option>WINDA</option>
+            <option>ZAOPATRZENIE</option>
+            <option>DOCHÓD</option>
+            <option>PRZYNĘTA</option>
+            <option class="taskAnsw">METAL</option>
+            <option>LICENCJA</option>
+            <option>MŁOTEK</option>
+            <option>SIEDZENIE</option>
+            <option>WADA</option>
+            <option>PODDASZE</option>
+            <option>WULKAN</option>
+            <option>SMOK</option>
+            <option>OKRUCHY</option>
+            <option>SŁOMKA</option>
+            <option>CIEŃ</option>
+            <option>CERTYFIKAT</option>
+            <option>SZPIEG</option>
+        </select>
     </div>
 </div>
 
