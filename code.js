@@ -6,7 +6,25 @@ var taskDivs = [];
 var answersBtns = [];
 var tasksAnswers = [];
 
+var answerSpots = [];
+
 var resultsText;
+
+var database = [ "KACZKA", "AUTOBUS", "ODRZUTOWIEC", "BETON", "TWARZ", "KANAPKA",
+ "PIES", "MIKROFON", "BANAN", "ŚCIANA", "LUSTERKO", "JABŁKO", "MYDŁO", "GŁOŚNIK",
+ "WYNIK", "WŁOCHY", "KALORYFER", "ENCYKLOPEDIA", "BASEN", "DZIADEK", "KOMETA",
+ "GITARA", "ZABAWA", "RANA", "ENZYM", "BABCIA", "RULETKA", "POLSKA", "OPROGRAMOWANIE",
+ "WIELKOLUD", "DRUT", "MĄDROŚĆ", "FIGURA", "WODOSPAD", "PROTEZA", "DRZWI", "TABLICA",
+ "BONUS", "PLAC", "WIESZAK", "RAMA", "LÓD", "INŻYNIER", "SZLAUCH", "OLIWKA",
+ "WINDA", "ZAOPATRZENIE", "DOCHÓD", "PRZYNĘTA", "METAL", "LICENCJA", "MŁOTEK",
+ "SIEDZENIE", "WADA", "PODDASZE", "WULKAN", "SMOK", "OKRUCHY", "SŁOMKA",
+ "CIEŃ", "CERTYFIKAT", "SZPIEG"]
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 window.addEventListener("DOMContentLoaded", () => {
     resultsText = document.getElementById("results");
@@ -15,12 +33,33 @@ window.addEventListener("DOMContentLoaded", () => {
     taskDivs = Array.from(document.getElementsByClassName("hidden"));
     answersBtns = Array.from(document.getElementsByClassName("taskOptOff"));
     displayAnwsersBtns = document.getElementsByClassName("answer");
-    tasksAnswers = document.getElementsByClassName("taskAnsw");
+    answerSpots = document.getElementsByClassName("taskAnsw");
 
     for (let i = 0; i < continueBtns.length; i++) {
-        const element = continueBtns[i];
+        let element = continueBtns[i];
+        let currentDB = database.map((x)=>x);
+        let toAdd = [];
+        for(let j = 0; j < Math.pow(2, i+1); j++) {
+            let randIndex = getRandomInt(0, currentDB.length);
+            toAdd.push(currentDB[randIndex]);
+            currentDB.splice(randIndex, 1);
+        }
+
+        let answerIndex = getRandomInt(0, toAdd.length);
+        for (let j = 0; j < toAdd.length; j++) {
+            const el = toAdd[j];
+            if(j == answerIndex) {
+                tasksAnswers.push(el);
+                answerSpots[i].innerHTML = el;
+            }
+            element.innerHTML += "<option>" + el + "</option>\n";
+
+        }
+
         element.addEventListener("change", ((event) => {
-            if(event.target.value == tasksAnswers[i].innerHTML) {
+            console.log("Got: " + event.target.value);
+            console.log("Expected: " + tasksAnswers[i]);
+            if(event.target.value == tasksAnswers[i]) {
                 switchTaskVisibility(taskDivs[i], taskDivs[i+1]);
                 startTimer();
             }
@@ -32,6 +71,7 @@ window.addEventListener("DOMContentLoaded", () => {
         element.addEventListener("click", (() => {
             if(answersBtns[i]) answersBtns[i].className = "taskOpt"
             startTimer();
+            element.className = "hidden";
         }));
     }
 
