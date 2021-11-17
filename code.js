@@ -39,13 +39,13 @@ window.addEventListener("DOMContentLoaded", () => {
         let element = continueBtns[i];
         let currentDB = database.map((x)=>x);
         let toAdd = [];
-        for(let j = 0; j < Math.pow(2, i+1); j++) {
-            let randIndex = getRandomInt(0, currentDB.length);
+        for(let j = 0; j < (i + 1) * 3; j++) {
+            let randIndex = getRandomInt(0, currentDB.length - 1);
             toAdd.push(currentDB[randIndex]);
             currentDB.splice(randIndex, 1);
         }
 
-        let answerIndex = getRandomInt(0, toAdd.length);
+        let answerIndex = getRandomInt(0, toAdd.length - 1);
         for (let j = 0; j < toAdd.length; j++) {
             const el = toAdd[j];
             if(j == answerIndex) {
@@ -57,8 +57,6 @@ window.addEventListener("DOMContentLoaded", () => {
         }
 
         element.addEventListener("change", ((event) => {
-            console.log("Got: " + event.target.value);
-            console.log("Expected: " + tasksAnswers[i]);
             if(event.target.value == tasksAnswers[i]) {
                 switchTaskVisibility(taskDivs[i], taskDivs[i+1]);
                 startTimer();
@@ -77,10 +75,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     var introBtn = document.getElementById("introBtn");
     var intro = document.getElementsByClassName("intro")[0];
-    console.log(introBtn);
-    console.log(intro);
     introBtn.addEventListener("click", ()=>{
-        console.log("CLICK");
         switchTaskVisibility(intro, taskDivs[0]);
     })
     intro.className = "visible"; // display intro
@@ -91,13 +86,11 @@ var startTime = null;
 function startTimer() {
     if(startTime) {
         var endTime = Date.now();
-        console.log("timer ended - " + endTime);
         times.push(endTime - startTime);
         startTime = null;
         resultsText.innerHTML = times;
     } else {
         startTime = Date.now();
-        console.log("timer started - " + startTime);
     }
 }
 
